@@ -1,0 +1,154 @@
+# there are three screens
+windowManager:
+	signupWindow:
+	dataWindow:
+
+
+
+
+# GUI for the signup window
+<signupWindow>:
+	name2 : name2
+	day : day
+	month:month
+	year:year
+	email : email
+
+
+	FloatLayout:
+	    Label:
+	        text : "WELLCOME USER"
+			size_hint : 0.7, 0.1
+			pos_hint : {"x":0.20, "top":1}
+			font_size:55
+        Label:
+	        text : "please enter user details"
+			size_hint : 0.5, 0.3
+			pos_hint : {"x":0.20, "top":1}
+            font_size:25
+
+
+
+
+		Label:
+			text : "NAME: "
+			size_hint : 0.2, 0.1
+			pos_hint : {"x":0.25, "top":0.75}
+		TextInput:
+		    hint_text:"Enter your name"
+			id : name2
+			multiline : False
+			size_hint : 0.3, 0.1
+			pos_hint : {"x" : 0.45, "top" : 0.75}
+
+
+
+		Label:
+			text : "DATE: "
+			size_hint : 0.2, 0.1
+			pos_hint : {"x" : 0.25, "top" : 0.55}
+		TextInput:
+		    hint_text:"day"
+			id : day
+			multiline : True
+			size_hint : 0.1, 0.1
+			pos_hint : {"x" : 0.45, "top" : 0.55}
+		TextInput:
+		    hint_text:"month"
+			id : month
+			multiline : True
+			size_hint : 0.1, 0.1
+			pos_hint : {"x" : 0.55, "top" : 0.55}
+		TextInput:
+		    hint_text:"year"
+			id : year
+			multiline : True
+			size_hint : 0.1, 0.1
+			pos_hint : {"x" : 0.65, "top" : 0.55}
+
+
+
+
+		Label:
+			text : "EMAIL:"
+			size_hint : 0.2, 0.1
+			pos_hint : {"x" : 0.25, "top" : 0.35}
+		TextInput:
+		    hint_text:"Enter your email"
+			id : email
+			multiline : False
+			size_hint : 0.3, 0.1
+			pos_hint : {"x" : 0.45, "top" : 0.35}
+
+
+
+		Button:
+			text : "SUBMIT"
+			size_hint : 0.3, 0.1
+			pos_hint : {"x" : 0.39, "top" : 0.15}
+			on_press :
+				root.signupbtn()
+				root.manager.transition.direction = "right"
+
+
+
+
+
+<dataWindow>:
+
+    FloatLayout:
+
+        Label:
+	        text : "Registration Successful"
+	        id:test1
+			size_hint : 0.7, 0.1
+			pos_hint : {"x":0.20, "top":1}
+			font_size:45
+        Label:
+            text : "your details are submitted successfully"
+			size_hint : 0.5, 0.3
+			pos_hint : {"x":0.23, "top":1}
+            font_size:20
+
+
+
+        TextInput:
+		    hint_text:"NAME"
+			multiline : True
+			size_hint : 0.2, 0.1
+			pos_hint : {"x" : 0.25, "top" : 0.80}
+		TextInput:
+		    hint_text:"B DATE"
+			multiline : True
+			size_hint : 0.2, 0.1
+			pos_hint : {"x" : 0.45, "top" : 0.80}
+		TextInput:
+		    hint_text:"EMAIL"
+			multiline : True
+			size_hint : 0.2, 0.1
+			pos_hint : {"x" : 0.65, "top" : 0.80}
+
+
+
+
+		TextInput:
+		    text:""
+			id : name9
+			multiline : False
+			size_hint : 0.2, 0.1
+			pos_hint : {"x" : 0.25, "top" : 0.70}
+		TextInput:
+		    hint_text:""
+			id : date9
+			multiline : False
+			size_hint : 0.2, 0.1
+			pos_hint : {"x" : 0.45, "top" : 0.70}
+		TextInput:
+		    hint_text:""
+			id : email9
+			multiline : False
+			size_hint : 0.2, 0.1
+			pos_hint : {"x" : 0.65, "top" : 0.70}
+
+
+
